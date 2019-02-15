@@ -24,7 +24,6 @@ public class UserRepositoryImpl implements UserRepository {
 	private static final String DELETE_TOKEN_BY_EMAIl = " UPDATE users SET token = null WHERE email = :email ";
 	private static final String UPDATE_TOKEN = " UPDATE users SET token = :token WHERE id = :id ";
 
-
 	private final Sql2o sql2o;
 	private final Executor executor;
 

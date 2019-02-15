@@ -40,7 +40,7 @@ public class TodoServiceImpl implements TodoService {
 	}
 
 	@Override
-	public CompletableFuture<Todo> deleteTodo(final TodoRequest todoRequest, final String userId) {
+	public CompletableFuture<Optional<Todo>> deleteTodo(final TodoRequest todoRequest, final String userId) {
 		final Todo todo = new Todo();
 		todo.setId(todoRequest.getId());
 		todo.setUserId(userId);
@@ -51,7 +51,7 @@ public class TodoServiceImpl implements TodoService {
 	}
 
 	@Override
-	public CompletableFuture<Todo> toggleTodo(final TodoRequest todoRequest, final String userId) {
+	public CompletableFuture<Optional<Todo>> toggleTodo(final TodoRequest todoRequest, final String userId) {
 		final Todo todo = new Todo();
 		todo.setId(todoRequest.getId());
 		todo.setUserId(userId);

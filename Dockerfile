@@ -1,6 +1,6 @@
 FROM openjdk:8-jre
 
-ADD ./build/libs/*-SNAPSHOT.jar app.jar
+ADD ./build/libs/*-SNAPSHOT-boot.jar app.jar
 
 ENV xms=1g
 

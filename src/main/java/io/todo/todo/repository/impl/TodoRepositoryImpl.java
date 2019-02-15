@@ -70,7 +70,7 @@ public class TodoRepositoryImpl implements TodoRepository {
 	}
 
 	@Override
-	public CompletableFuture<Todo> update(final Todo todo) {
+	public CompletableFuture<Optional<Todo>> update(final Todo todo) {
 		return CompletableFuture.supplyAsync(() -> {
 			try (Connection con = sql2o.open()) {
 				con.createQuery(UPDATE_TODO)
@@ -79,10 +79,11 @@ public class TodoRepositoryImpl implements TodoRepository {
 						.addParameter("status", todo.getStatus())
 						.addParameter("updatedAt", todo.getUpdatedAt())
 						.executeUpdate();
+				return Optional.of(todo);
 			} catch (Exception e) {
 				log.error("{}", e);
-			} finally {
-				return todo;
+
+				return Optional.empty();
 			}
 		}, executor);
 	}

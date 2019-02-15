@@ -13,8 +13,8 @@ public interface TodoService {
 
 	CompletableFuture<Optional<Todo>> addTodo(final TodoRequest todoRequest, final String userId);
 
-	CompletableFuture<Todo> deleteTodo(final TodoRequest todoRequest, final String userId);
+	CompletableFuture<Optional<Todo>> deleteTodo(final TodoRequest todoRequest, final String userId);
 
-	CompletableFuture<Todo> toggleTodo(final TodoRequest todoRequest, final String userId);
+	CompletableFuture<Optional<Todo>> toggleTodo(final TodoRequest todoRequest, final String userId);
 
 }

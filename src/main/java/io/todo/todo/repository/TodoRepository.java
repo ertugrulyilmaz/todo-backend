@@ -12,6 +12,6 @@ public interface TodoRepository {
 
 	CompletableFuture<Optional<Todo>> save(final Todo todo);
 
-	CompletableFuture<Todo> update(final Todo todo);
+	CompletableFuture<Optional<Todo>> update(final Todo todo);
 
 }
