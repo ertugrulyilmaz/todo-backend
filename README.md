@@ -13,7 +13,8 @@ docker build -t .
 
 And also you need mysql database for project.
 
-you can use mysql 8 docker and insert scripts and sql folder.
+you can use mysql 8 docker.
+Database schema script is under sql folder.
 
 ```sh
 
