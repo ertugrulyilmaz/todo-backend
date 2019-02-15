@@ -1,0 +1,26 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost/todo-app?useSSL=false&autoReconnect=true&useUnicode=true&characterEncoding=UTF-8&characterSetResults=utf8&connectionCollation=utf8_general_ci
+    username: root
+    password: password
+    idle-timeout: 10
+    minimum-idle: 0
+    maximum-pool-size: 10
+    connection-timeout: 2000
+    max-lifetime: 0
+
+executor:
+  core-pool-size: 10
+  max-pool-size: 100
+  queue-capacity: 100
+
+auth:
+  jwt:
+    exp-minute: 86400
+    secret: AAAADDDDFFFFQQQWWWEEERRR!!!@@@@####$$$$%%%%^^^^^&&&YYYYHHHFFFSSXCXCXCXCXCXCZXCXCVBSDFWERQWEQWEASDQWEGJIOYUT^%&454545
+
+server:
+  port: 8888
